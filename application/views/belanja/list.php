@@ -64,6 +64,7 @@
                      <button type="submit" name="update" class="btn btn-warning"><i class="fa fa-edit"> Update</i></button>   
                     <a href="<?php echo base_url('belanja/hapus/'.$keranjang['rowid']) ?>" name="hapus" class="btn btn-secondary"><i class="fa fa-trash-o"> Hapus</i></a>   
                     </td>
+					<td><input type="hidden" name="berat" value="<?php echo $produk->berat ?>"></td>	
 				</tr>
 				<?php 
 				//form close
@@ -150,7 +151,7 @@
 		                    	</div>
 		                    </div> 	
 		                    </div>
-		                    <input type="hidden" name="berat" value="<?php echo $produk->berat ?>">		                     
+		               	                     
 		                     <input type="hidden" name="provinsi">	
 		                     <input type="hidden" name="kota">
 		                     <input type="hidden" name="tipekota">
