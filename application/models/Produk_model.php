@@ -41,6 +41,7 @@ class Produk_model extends CI_Model {
 		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
 		$this->db->join('gambar', 'gambar.id_produk = produk.id_produk', 'left');
 		// end join
+		$this->db->where('produk.stok != 0');
 		$this->db->where('produk.status_produk', 'Publish');
 		$this->db->group_by('produk.id_produk');
 		$this->db->order_by('id_produk', 'desc');
@@ -83,6 +84,7 @@ class Produk_model extends CI_Model {
 		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
 		$this->db->join('gambar', 'gambar.id_produk = produk.id_produk', 'left');
 		// end join
+		$this->db->where('produk.stok != 0');
 		$this->db->where('produk.status_produk', 'Publish');
 		$this->db->group_by('produk.id_produk');
 		$this->db->order_by('id_produk', 'desc');
